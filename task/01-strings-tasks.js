@@ -273,12 +273,7 @@ function getCardId(value) {
     var deck = [];
     var colors = ['♣', '♦', '♥', '♠'];
     var numbers = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
-    colors.forEach(color => {
-        numbers.forEach(number => {
-            deck.push(number + color);
-        });
-    });
-
+    colors.forEach(color => numbers.forEach(number => deck.push(number + color)));
     return deck.indexOf(value);
 }
 
